@@ -16,8 +16,8 @@
 <br />
 <br />
 
-> [!TIP]
-> Currently Nyxia is not online/available to be added to your server *just yet* but will be in the future so keep an eye on this message!
+> [!WARNING]
+> This project does not work as it is. Please do not use just yet
 
 <br />
 
