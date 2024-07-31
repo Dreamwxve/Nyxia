@@ -2,7 +2,7 @@ import { ApplicationCommandType, EmbedBuilder, ActionRowBuilder, ButtonBuilder, 
 
 export default {
  name: "donate",
- description: "🪙 Help us develop Majo.exe by donating",
+ description: "🪙 Help me develop Nyxia",
  type: ApplicationCommandType.ChatInput,
  cooldown: 3000,
  dm_permission: true,
@@ -20,12 +20,12 @@ export default {
      })
      .setColor(guildSettings?.embedColor || client.config.defaultColor)
      .setTimestamp()
-     .setTitle("🪙 Donate to Majo.exe");
+     .setTitle("🪙 Donate");
     return interaction.followUp({ ephemeral: false, embeds: [embed] });
    }
 
    const embed = new EmbedBuilder()
-    .setDescription("> **You can donate to Majo.exe by using the following methods:**\n" + client.config.donate.links.map((link) => `- [${link.icon} ${link.name}](${link.url})`).join("\n"))
+    .setDescription("> **You can donate to me by using the following methods:**\n" + client.config.donate.links.map((link) => `- [${link.icon} ${link.name}](${link.url})`).join("\n"))
     .setFooter({
      text: `Requested by ${interaction.member.user.globalName || interaction.member.user.username}`,
      iconURL: interaction.member.user.displayAvatarURL({
@@ -34,7 +34,7 @@ export default {
     })
     .setColor(guildSettings?.embedColor || client.config.defaultColor)
     .setTimestamp()
-    .setTitle("🪙 Donate to Majo.exe");
+    .setTitle("🪙 Donate to");
 
    const action = new ActionRowBuilder().addComponents(
     client.config.donate.links.map((link) => {

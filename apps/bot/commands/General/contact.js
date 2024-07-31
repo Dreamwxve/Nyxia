@@ -1,8 +1,9 @@
 import { ApplicationCommandType, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } from "discord.js";
+import fetch from "node-fetch";
 
 export default {
  name: "contact",
- description: "📝 Contact the Majo.exe team",
+ description: "📝 Contact the developer",
  type: ApplicationCommandType.ChatInput,
  cooldown: 3000,
  dm_permission: true,
@@ -42,7 +43,7 @@ export default {
     );
 
    const embed = new EmbedBuilder()
-    .setDescription(`Click the button below or [click here](${client.config.url}/contact) to contact the Majo.exe team.\n\n>>> **Useful links:**\n- [View all Majo.exe commands](${client.config.url}/commands)\n- [Majo.exe support server](${client.config.url}/support)`)
+    .setDescription(`Click the button below or [click here](${client.config.url}/contact) to contact the developer\n\n>>> **Useful links:**\n- [View all commands](${client.config.url}/commands)\n- [Support Server](${client.config.url}/support)`)
     .setFooter({
      text: `Requested by ${interaction.member.user.globalName || interaction.member.user.username}`,
      iconURL: interaction.member.user.displayAvatarURL({

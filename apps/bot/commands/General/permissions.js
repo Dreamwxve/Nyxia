@@ -8,7 +8,7 @@ function convertCamelCaseToWords(text) {
 
 export default {
  name: "permissions",
- description: "🎛️ Check Majo.exe's permissions in your server",
+ description: "🎛️ Check my permissions in your server",
  type: ApplicationCommandType.ChatInput,
  cooldown: 5000,
  dm_permission: false,

@@ -3,7 +3,7 @@ import { ApplicationCommandType, EmbedBuilder, codeBlock, Status } from "discord
 
 export default {
  name: "ping",
- description: "🏓 Check the Majo.exe ping",
+ description: "🏓 Check the ping",
  type: ApplicationCommandType.ChatInput,
  cooldown: 3000,
  usage: "/ping",
@@ -47,11 +47,7 @@ export default {
       name: "Shard",
       value: codeBlock("yaml", `${thisServerShard.id}/${client.ws.shards.size} (${thisServerShard.ping > 0 ? `${Math.floor(thisServerShard.ping)}ms` : "Calculating..."})`),
       inline: true,
-     },
-     {
-      name: "💡 Did you know about this?",
-      value: ">>> **The stats above are due to our wonderful hosting - [TrestHost](https://dash.tresthost.me/register?ref=majonez.exe)**. Register now and try their __VPS, Node.js, Go, Java and Python hosting!__",
-     },
+     }
     ])
     .setFooter({
      text: `Requested by ${interaction.member.user.globalName || interaction.member.user.username}`,
