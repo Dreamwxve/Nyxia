@@ -14,10 +14,6 @@
     "prisma:format": "prisma format",
     "prisma:push": "prisma db push",
     "prisma:seed": "node ./src/seed.js",
-    "format": "prettier . --write --cache --ignore-unknown --plugin=prettier-plugin-prisma",
-    "format:check": "prettier . --check --cache",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
     "prebuild": "pnpm run prisma:generate",
     "studio": "prisma studio"
   },
@@ -51,11 +47,5 @@
     "postgresql",
     "mysql"
   ],
-  "author": "Igor Kowalczyk",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/igorkowalczyk/majo.exe/issues"
-  },
-  "homepage": "https://github.com/igorkowalczyk/majo.exe#readme",
   "packageManager": "pnpm@9.6.0"
 }

@@ -1,7 +1,6 @@
 {
   "name": "@nyxia/util",
   "version": "6.0.0",
-  "description": "Shared utility functions for Majo.exe",
   "exports": {
     "./database": "./database/index.js",
     "./database/*": "./database/*",
@@ -20,12 +19,6 @@
     "./images/*": "./images/*"
   },
   "type": "module",
-  "scripts": {
-    "format": "prettier . --write --cache --ignore-unknown",
-    "format:check": "prettier . --check --cache",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  },
   "dependencies": {
     "@nyxia/config": "workspace:*",
     "@nyxia/database": "workspace:*",
@@ -37,22 +30,5 @@
   "engines": {
     "node": ">=20.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/igorkowalczyk/majo.exe.git",
-    "directory": "packages/util"
-  },
-  "keywords": [
-    "Majo.exe",
-    "util",
-    "shared",
-    "utility-functions"
-  ],
-  "author": "Igor Kowalczyk",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/igorkowalczyk/majo.exe/issues"
-  },
-  "homepage": "https://github.com/igorkowalczyk/majo.exe#readme",
   "packageManager": "pnpm@9.6.0"
 }

@@ -1,18 +1,12 @@
 {
   "name": "@nyxia/dashboard",
   "version": "6.0.0",
-  "description": "Dashboard for Majo.exe built on Next.js and Tailwind.css",
   "scripts": {
     "start": "next start",
     "dev": "next dev",
     "build": "next build",
-    "docker:build": "cd ../.. & docker build -t majoexe/dashboard:latest -f ./apps/dashboard/Dockerfile .",
     "deploy": "pnpm run build && pnpm run start",
-    "format": "prettier . --write --cache --ignore-unknown --plugin=prettier-plugin-tailwindcss",
-    "format:check": "prettier . --check --cache",
-    "analyze": "ANALYZE=true next build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
     "@headlessui/react": "2.1.2",
@@ -60,7 +54,6 @@
     "@tailwindcss/typography": "0.5.13",
     "autoprefixer": "10.4.19",
     "postcss": "8.4.40",
-    "prettier-plugin-tailwindcss": "0.6.5",
     "tailwind-gradient-mask-image": "1.2.0",
     "tailwind-merge": "2.4.0",
     "tailwindcss": "3.4.7",
@@ -74,24 +67,5 @@
     "not dead",
     "not op_mini all"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/igorkowalczyk/majo.exe.git",
-    "directory": "apps/dashboard"
-  },
-  "keywords": [
-    "Majo.exe",
-    "Dashboard",
-    "React",
-    "Next.js",
-    "Tailwind.css",
-    "web-dashboard"
-  ],
-  "author": "Igor Kowalczyk",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/igorkowalczyk/majo.exe/issues"
-  },
-  "homepage": "https://github.com/igorkowalczyk/majo.exe#readme",
   "packageManager": "pnpm@9.6.0"
 }
