@@ -54,3 +54,4 @@ jspm_packages/
 .turbo
 .vercel
 packages/database/.env
+packages/database/.env
