@@ -26,13 +26,6 @@
     "dotenv-cli": "7.4.2",
     "turbo": "2.0.9"
   },
-  "devDependencies": {
-    "@igorkowalczyk/eslint-config": "3.0.0-beta.11",
-    "@igorkowalczyk/prettier-config": "3.0.0-beta.11",
-    "eslint": "9.8.0",
-    "eslint-plugin-turbo": "2.0.9",
-    "prettier": "3.3.3"
-  },
   "engines": {
     "node": ">=20.0.0"
   },
