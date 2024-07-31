@@ -1,6 +1,6 @@
-import { dashboardConfig, globalConfig } from "@majoexe/config";
-import prismaClient from "@majoexe/database";
-import { formatNumber } from "@majoexe/util/functions/util";
+import { dashboardConfig, globalConfig } from "@nyxia/config";
+import prismaClient from "@nyxia/database";
+import { formatNumber } from "@nyxia/util/functions/util";
 import Link from "next/link";
 import avatar01 from "public/assets/avatars/01.webp";
 import avatar02 from "public/assets/avatars/02.webp";

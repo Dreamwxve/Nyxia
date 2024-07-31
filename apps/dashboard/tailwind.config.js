@@ -1,6 +1,6 @@
 import tailwindHeadlessui from "@headlessui/tailwindcss";
-import { globalConfig } from "@majoexe/config";
-import { adjustColor } from "@majoexe/util/functions/util";
+import { globalConfig } from "@nyxia/config";
+import { adjustColor } from "@nyxia/util/functions/util";
 import tailwindTypography from "@tailwindcss/typography";
 import svgToDataUri from "mini-svg-data-uri";
 import tailwindGradientMaskImage from "tailwind-gradient-mask-image";

@@ -1,7 +1,7 @@
-import { globalConfig } from "@majoexe/config";
-import prismaClient from "@majoexe/database";
-import { createHTTPAutomodRule, validateAutoModIgnores, validateAutoModRuleActions } from "@majoexe/util/functions/automod";
-import { getServer, getGuildMember } from "@majoexe/util/functions/guild";
+import { globalConfig } from "@nyxia/config";
+import prismaClient from "@nyxia/database";
+import { createHTTPAutomodRule, validateAutoModIgnores, validateAutoModRuleActions } from "@nyxia/util/functions/automod";
+import { getServer, getGuildMember } from "@nyxia/util/functions/guild";
 import { AutoModerationActionType, AutoModerationRuleTriggerType, AutoModerationRuleEventType, ChannelType } from "discord-api-types/v10";
 import { getSession } from "lib/session";
 import { NextResponse } from "next/server";

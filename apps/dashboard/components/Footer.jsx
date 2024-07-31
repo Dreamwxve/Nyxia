@@ -1,6 +1,6 @@
 "use client";
 
-import { dashboardConfig } from "@majoexe/config";
+import { dashboardConfig } from "@nyxia/config";
 import clsx from "clsx";
 import Link from "next/link";
 import { useSelectedLayoutSegment, usePathname } from "next/navigation";

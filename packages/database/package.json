@@ -1,5 +1,5 @@
 {
-  "name": "@majoexe/database",
+  "name": "@nyxia/database",
   "version": "6.0.0",
   "description": "Majo.exe main database schema/client/migrations package",
   "exports": {
@@ -22,7 +22,7 @@
     "studio": "prisma studio"
   },
   "dependencies": {
-    "@majoexe/config": "workspace:*",
+    "@nyxia/config": "workspace:*",
     "@neondatabase/serverless": "0.9.4",
     "@prisma/adapter-neon": "5.17.0",
     "@prisma/client": "5.17.0",

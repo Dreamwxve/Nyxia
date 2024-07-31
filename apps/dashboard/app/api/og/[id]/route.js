@@ -1,5 +1,5 @@
 /* eslint-disable next/no-img-element */
-import { getServer } from "@majoexe/util/functions/guild";
+import { getServer } from "@nyxia/util/functions/guild";
 import { redirect } from "next/navigation";
 import { ImageResponse } from "next/og";
 

@@ -1,5 +1,5 @@
-import { dashboardConfig } from "@majoexe/config";
-import prismaClient from "@majoexe/database";
+import { dashboardConfig } from "@nyxia/config";
+import prismaClient from "@nyxia/database";
 import Balancer from "react-wrap-balancer";
 import { Block } from "@/components/Block";
 import { DiscordCommands } from "@/components/client/commandModules/DiscordCommands";

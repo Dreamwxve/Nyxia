@@ -1,5 +1,5 @@
 {
-  "name": "@majoexe/util",
+  "name": "@nyxia/util",
   "version": "6.0.0",
   "description": "Shared utility functions for Majo.exe",
   "exports": {
@@ -27,8 +27,8 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@majoexe/config": "workspace:*",
-    "@majoexe/database": "workspace:*",
+    "@nyxia/config": "workspace:*",
+    "@nyxia/database": "workspace:*",
     "chalk": "5.3.0",
     "discord-api-types": "0.37.93",
     "discord.js": "14.15.3",

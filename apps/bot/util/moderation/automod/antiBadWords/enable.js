@@ -1,4 +1,4 @@
-import { createAutoModRule, syncAutoModRule } from "@majoexe/util/database";
+import { createAutoModRule, syncAutoModRule } from "@nyxia/util/database";
 import { ChannelType, AutoModerationRuleEventType, AutoModerationRuleKeywordPresetType, AutoModerationActionType, AutoModerationRuleTriggerType, EmbedBuilder, PermissionsBitField, codeBlock } from "discord.js";
 
 export async function enableAntiBadWords(client, interaction, guildSettings) {

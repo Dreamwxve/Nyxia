@@ -1,4 +1,4 @@
-import { fetchLogs, countLogs } from "@majoexe/util/database";
+import { fetchLogs, countLogs } from "@nyxia/util/database";
 import { ApplicationCommandType, ApplicationCommandOptionType, PermissionFlagsBits, EmbedBuilder } from "discord.js";
 
 export default {

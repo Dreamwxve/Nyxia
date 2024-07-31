@@ -1,6 +1,6 @@
-import { dashboardConfig } from "@majoexe/config";
-import prismaClient from "@majoexe/database";
-import { getServer, getGuildPreview } from "@majoexe/util/functions/guild";
+import { dashboardConfig } from "@nyxia/config";
+import prismaClient from "@nyxia/database";
+import { getServer, getGuildPreview } from "@nyxia/util/functions/guild";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";

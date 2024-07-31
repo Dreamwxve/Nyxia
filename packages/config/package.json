@@ -1,5 +1,5 @@
 {
- "name": "@majoexe/config",
+ "name": "@nyxia/config",
  "version": "6.0.0",
  "description": "Majo.exe shared config for all packages and projects",
  "exports": {

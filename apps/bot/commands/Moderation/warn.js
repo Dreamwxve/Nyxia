@@ -1,4 +1,4 @@
-import { clearWarns, listWarnings, warnUser, removeWarning } from "@majoexe/util/database";
+import { clearWarns, listWarnings, warnUser, removeWarning } from "@nyxia/util/database";
 import { ApplicationCommandType, ApplicationCommandOptionType, PermissionsBitField, EmbedBuilder, codeBlock, PermissionFlagsBits } from "discord.js";
 
 export default {

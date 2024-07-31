@@ -1,6 +1,6 @@
-import prismaClient from "@majoexe/database";
-import { getServer, getGuildPreview, getGuildMember } from "@majoexe/util/functions/guild";
-import { fillMissingDates } from "@majoexe/util/functions/util";
+import prismaClient from "@nyxia/database";
+import { getServer, getGuildPreview, getGuildMember } from "@nyxia/util/functions/guild";
+import { fillMissingDates } from "@nyxia/util/functions/util";
 import clsx from "clsx";
 import { getSession } from "lib/session";
 import Link from "next/link";

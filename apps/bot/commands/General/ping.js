@@ -1,4 +1,4 @@
-import prismaClient from "@majoexe/database";
+import prismaClient from "@nyxia/database";
 import { ApplicationCommandType, EmbedBuilder, codeBlock, Status } from "discord.js";
 
 export default {

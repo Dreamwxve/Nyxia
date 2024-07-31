@@ -1,4 +1,4 @@
-import { formatNumber } from "@majoexe/util/functions/util";
+import { formatNumber } from "@nyxia/util/functions/util";
 import { ApplicationCommandType, EmbedBuilder, ButtonBuilder, ActionRowBuilder, ButtonStyle } from "discord.js";
 
 export default {

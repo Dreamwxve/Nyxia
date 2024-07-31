@@ -1,5 +1,5 @@
-import { resetXP } from "@majoexe/util/database";
-import { getServer, getGuildMember } from "@majoexe/util/functions/guild";
+import { resetXP } from "@nyxia/util/database";
+import { getServer, getGuildMember } from "@nyxia/util/functions/guild";
 import { getSession } from "lib/session";
 import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
