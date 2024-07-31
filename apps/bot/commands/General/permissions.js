@@ -29,7 +29,7 @@ export default {
     .setColor(guildSettings.embedColor || client.config.defaultColor)
     .setTimestamp()
     .setTitle(`🎛️ Permissions in ${interaction.guild.name}`)
-    .setDescription(`> To work properly, ${client.user} needs **all** of the following permissions:\n${codeBlock(permissionsText.join("\n"))}`)
+    .setDescription(`> To work properly, Nyxia needs **all** of the following permissions:\n${codeBlock(permissionsText.join("\n"))}`)
     .setTimestamp()
     .setFooter({
      text: `Requested by ${interaction.member.user.globalName || interaction.member.user.username}`,
