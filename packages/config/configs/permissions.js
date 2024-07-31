@@ -27,5 +27,5 @@ const flagsBitsNumber = permissions.reduce((accumulator, currentValue) => accumu
 
 export const globalPermissions = {
  permissions: flagsBitsNumber, // string. Discord permissions array defined above using discord-api-types/v10
- scopes: [OAuth2Scopes.ApplicationsCommands, OAuth2Scopes.Bot].join("%20"), // string. Discord OAUTH2 scopes. See https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes
+ scopes: [OAuth2Scopes.Email, OAuth2Scopes.ApplicationsCommands, OAuth2Scopes.Bot].join("%20"), // string. Discord OAUTH2 scopes. See https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes
 };

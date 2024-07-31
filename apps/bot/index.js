@@ -11,24 +11,43 @@ import loadEvents from "./util/loaders/loadEvents.js";
 import loadFonts from "./util/loaders/loadFonts.js";
 import loadModals from "./util/loaders/loadModals.js";
 
-const cwd = dirname(fileURLToPath(import.meta.url));
-Logger("info", `Current working directory: ${cwd}`);
-process.chdir(cwd);
+Logger("info", "Waking up Nyxia...");
 
-Logger("info", "Starting Majo.exe Bot...");
-Logger("info", `Running version v${process.env.npm_package_version} on Node.js ${process.version} on ${process.platform} ${process.arch}`);
-Logger("info", "Check out the source code at https://github.com/igorkowalczyk/majo.exe! Don't forget to star the repository, it helps a lot!");
-
-const client = new Client({
- intents: [
-  // Prettier
-  GatewayIntentBits.Guilds,
-  GatewayIntentBits.GuildModeration,
-  GatewayIntentBits.GuildMembers,
-  GatewayIntentBits.GuildMessages,
-  GatewayIntentBits.GuildEmojisAndStickers,
-  GatewayIntentBits.GuildMessageReactions,
- ],
+const client = new Discord.Client({
+    autoReconnect: true,
+    partials: [
+        Discord.Partials.Channel,
+        Discord.Partials.GuildMember,
+        Discord.Partials.Message,
+        Discord.Partials.Reaction,
+        Discord.Partials.User,
+        Discord.Partials.GuildScheduledEvent 
+    ],
+    intents: [
+        Discord.GatewayIntentBits.AutoModerationConfiguration,
+        Discord.GatewayIntentBits.AutoModerationExecution,
+        Discord.GatewayIntentBits.DirectMessagePolls,
+        Discord.GatewayIntentBits.DirectMessageReactions,
+        Discord.GatewayIntentBits.DirectMessageTyping,
+        Discord.GatewayIntentBits.DirectMessages,
+       // Discord.GatewayIntentBits.GuildBans, // is now in GuildModeration
+        Discord.GatewayIntentBits.GuildEmojisAndStickers,
+        Discord.GatewayIntentBits.GuildIntegrations,
+        Discord.GatewayIntentBits.GuildInvites,
+        Discord.GatewayIntentBits.GuildMembers,
+        Discord.GatewayIntentBits.GuildMessagePolls,
+        Discord.GatewayIntentBits.GuildMessageReactions,
+        Discord.GatewayIntentBits.GuildMessageTyping,
+        Discord.GatewayIntentBits.GuildMessages,
+        Discord.GatewayIntentBits.GuildModeration, // Includes GUILD_AUDIT_LOG_ENTRY_CREATE, GUILD_BAN_ADD, GUILD_BAN_REMOVE
+        Discord.GatewayIntentBits.GuildPresences,
+        Discord.GatewayIntentBits.GuildScheduledEvents,
+        Discord.GatewayIntentBits.GuildVoiceStates,
+        Discord.GatewayIntentBits.GuildWebhooks,
+        Discord.GatewayIntentBits.Guilds,
+        Discord.GatewayIntentBits.MessageContent
+    ],
+    restTimeOffset: 0
 });
 
 client.config = {

@@ -6,7 +6,7 @@ config.presence = {
  status: PresenceUpdateStatus.Online, // PresenceUpdateStatus. Can be: "Online", "Idle", "DoNotDisturb", "Invisible" or "Offline" (Invisible and Offline are the same)
  activity: {
   // name: "?", // string. Activity name [not required when using custom type (4)
-  state: "🔥 Type /help to get started!", // string. Activity state [required when using custom type (4)]
+  state: "🛠️ Under development", // string. Activity state [required when using custom type (4)]
   type: ActivityType.Custom, // ActivityType. Activity type. Can be: "Playing", "Streaming", "Listening", "Watching", "Custom"
 
   /* Example: Using type 3 (Watching) with custom name
@@ -24,8 +24,8 @@ config.donate = {
  links: [
   {
    name: "Github Sponsors",
-   url: "https://github.com/sponsors/igorkowalczyk",
-   icon: "🔗",
+   url: "https://github.com/sponsors/dreamwxve",
+   icon: "<:github:1265997148907110400>",
   },
  ],
 };

@@ -37,9 +37,7 @@ jspm_packages/
 *.zip
 
 # dotenv environment variables file
-.env*
-!.env.example
-!packages/database/.env
+*.env*
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
@@ -55,3 +53,4 @@ jspm_packages/
 # Turborepo & Vercel
 .turbo
 .vercel
+packages/database/.env

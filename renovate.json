@@ -1,0 +1,33 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "timezone": "Australia/Hobart",
+  "extends": [
+    "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "postUpgradeTasks": {
+        "commands": ["pnpm install"],
+        "fileFilters": ["package.json", "pnpm-lock.yaml"]
+      }
+    }
+  ]
+=======
+ "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+ "extends": ["github>igorkowalczyk/shared-configs//packages/renovate-config/index.json"],
+ "packageRules": [
+  {
+   "matchFiles": ["/packages/dashboard/**"],
+   "labels": ["dependencies", "dashboard"]
+  },
+  {
+   "matchFiles": ["/packages/bot/**"],
+   "labels": ["dependencies"]
+  },
+  {
+   "matchPaths": ["+(package.json)"],
+   "labels": ["dependencies"]
+  }
+ ]
+}
