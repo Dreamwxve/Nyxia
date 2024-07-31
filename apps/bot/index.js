@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 import { globalConfig, botConfig, debuggerConfig, dashboardConfig, globalPermissions } from "@nyxia/config";
 import { createErrorEmbed } from "@nyxia/util/embeds";
 import { Logger, chalk } from "@nyxia/util/functions/util";
-import { Client, GatewayIntentBits } from "discord.js";
+import { Client, GatewayIntentBits, Partials } from "discord.js";
 import giveaway from "./util/giveaway/core.js";
 import loadCommands from "./util/loaders/loadCommands.js";
 import loadEmojis from "./util/loaders/loadEmojis.js";
