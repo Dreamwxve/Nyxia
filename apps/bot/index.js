@@ -16,36 +16,36 @@ Logger("info", "Waking up Nyxia...");
 const client = new Client({
     autoReconnect: true,
     partials: [
-        Discord.Partials.Channel,
-        Discord.Partials.GuildMember,
-        Discord.Partials.Message,
-        Discord.Partials.Reaction,
-        Discord.Partials.User,
-        Discord.Partials.GuildScheduledEvent 
+        Partials.Channel,
+        Partials.GuildMember,
+        Partials.Message,
+        Partials.Reaction,
+        Partials.User,
+        Partials.GuildScheduledEvent 
     ],
     intents: [
-        Discord.GatewayIntentBits.AutoModerationConfiguration,
-        Discord.GatewayIntentBits.AutoModerationExecution,
-        Discord.GatewayIntentBits.DirectMessagePolls,
-        Discord.GatewayIntentBits.DirectMessageReactions,
-        Discord.GatewayIntentBits.DirectMessageTyping,
-        Discord.GatewayIntentBits.DirectMessages,
-       // Discord.GatewayIntentBits.GuildBans, // is now in GuildModeration
-        Discord.GatewayIntentBits.GuildEmojisAndStickers,
-        Discord.GatewayIntentBits.GuildIntegrations,
-        Discord.GatewayIntentBits.GuildInvites,
-        Discord.GatewayIntentBits.GuildMembers,
-        Discord.GatewayIntentBits.GuildMessagePolls,
-        Discord.GatewayIntentBits.GuildMessageReactions,
-        Discord.GatewayIntentBits.GuildMessageTyping,
-        Discord.GatewayIntentBits.GuildMessages,
-        Discord.GatewayIntentBits.GuildModeration, // Includes GUILD_AUDIT_LOG_ENTRY_CREATE, GUILD_BAN_ADD, GUILD_BAN_REMOVE
-        Discord.GatewayIntentBits.GuildPresences,
-        Discord.GatewayIntentBits.GuildScheduledEvents,
-        Discord.GatewayIntentBits.GuildVoiceStates,
-        Discord.GatewayIntentBits.GuildWebhooks,
-        Discord.GatewayIntentBits.Guilds,
-        Discord.GatewayIntentBits.MessageContent
+       GatewayIntentBits.AutoModerationConfiguration,
+       GatewayIntentBits.AutoModerationExecution,
+       GatewayIntentBits.DirectMessagePolls,
+       GatewayIntentBits.DirectMessageReactions,
+       GatewayIntentBits.DirectMessageTyping,
+       GatewayIntentBits.DirectMessages,
+       //GatewayIntentBits.GuildBans, // is now in GuildModeration
+       GatewayIntentBits.GuildEmojisAndStickers,
+       GatewayIntentBits.GuildIntegrations,
+       GatewayIntentBits.GuildInvites,
+       GatewayIntentBits.GuildMembers,
+       GatewayIntentBits.GuildMessagePolls,
+       GatewayIntentBits.GuildMessageReactions,
+       GatewayIntentBits.GuildMessageTyping,
+       GatewayIntentBits.GuildMessages,
+       GatewayIntentBits.GuildModeration, // Includes GUILD_AUDIT_LOG_ENTRY_CREATE, GUILD_BAN_ADD, GUILD_BAN_REMOVE
+       GatewayIntentBits.GuildPresences,
+       GatewayIntentBits.GuildScheduledEvents,
+       GatewayIntentBits.GuildVoiceStates,
+       GatewayIntentBits.GuildWebhooks,
+       GatewayIntentBits.Guilds,
+       GatewayIntentBits.MessageContent
     ],
     restTimeOffset: 0
 });
