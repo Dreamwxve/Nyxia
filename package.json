@@ -3,19 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Monorepo for majo.exe",
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
     "build:force": "turbo run build:force",
     "deploy": "turbo run deploy",
     "analyze": "turbo run analyze",
-    "lint": "turbo run lint",
-    "lint:fix": "turbo run lint:fix",
-    "docker:all": "docker compose -f docker-compose.yaml up -d",
-    "docker:build": "turbo run docker:build",
-    "docker:build:bot": "docker build -t majoexe/bot:latest -f ./apps/bot/Dockerfile .",
-    "docker:run:bot": "docker run -it --init --rm --env-file .env majoexe/bot:latest",
     "format": "turbo run format",
     "format:check": "turbo run format:check",
     "prisma:generate": "turbo run prisma:generate ",
@@ -43,22 +36,5 @@
   "engines": {
     "node": ">=20.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IgorKowalczyk/majo.exe.git"
-  },
-  "author": "Igor Kowalczyk",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/IgorKowalczyk/majo.exe/issues"
-  },
-  "homepage": "https://majoexe.xyz",
-  "keywords": [
-    "node",
-    "discord",
-    "majoexe",
-    "bot",
-    "discord-bot"
-  ],
   "packageManager": "pnpm@9.6.0"
 }
