@@ -13,7 +13,7 @@ import loadModals from "./util/loaders/loadModals.js";
 
 Logger("info", "Waking up Nyxia...");
 
-const client = new Discord.Client({
+const client = new Client({
     autoReconnect: true,
     partials: [
         Discord.Partials.Channel,
