@@ -1,6 +1,6 @@
 import { EmbedBuilder, PermissionsBitField } from "discord.js";
 
-export async function kickMember(client, interaction, color) {
+export async function muteMember(client, interaction, color) {
  try {
   let user = interaction.options.getMember("user");
   const reason = interaction.options.getString("reason") || "No reason provided";
@@ -52,7 +52,7 @@ export async function kickMember(client, interaction, color) {
    return client.errorMessages.createSlashError(interaction, "❌ This user has higher or equal roles than me");
   }
 
-  await user.timeout(time, reason);
+  await interaction.guild.members.timeout(user, { duration, reason });
 
   const embed = new EmbedBuilder()
    .setColor(color)
@@ -68,6 +68,7 @@ export async function kickMember(client, interaction, color) {
 
   interaction.followUp({ embeds: [embed] });
  } catch (err) {
+  console.log(err)
   client.errorMessages.internalError(interaction, err);
  }
 }
