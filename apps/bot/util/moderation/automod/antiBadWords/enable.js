@@ -44,7 +44,7 @@ export async function enableAntiBadWords(client, interaction, guildSettings) {
   return interaction.followUp({ embeds: [embed] });
  } else {
   const ruleToCreate = {
-   name: "Anti bad words [Majo.exe]",
+   name: "Anti bad words [default]",
    creatorId: client.id,
    enabled: true,
    eventType: AutoModerationRuleEventType.MessageSend,
@@ -59,7 +59,7 @@ export async function enableAntiBadWords(client, interaction, guildSettings) {
      type: AutoModerationActionType.BlockMessage,
      metadata: {
       channel: interaction.channel,
-      customMessage: "Message blocked due to containing a bad word. Rule added by Majo.exe",
+      customMessage: "Message blocked due to containing a bad word from the default filter.",
      },
     },
    ],
@@ -91,7 +91,7 @@ export async function enableAntiBadWords(client, interaction, guildSettings) {
     type: AutoModerationActionType.SendAlertMessage,
     metadata: {
      channel: logChannel,
-     message: "Message blocked due to containing a bad word. Rule added by Majo.exe",
+     message: "Message blocked due to containing a bad word from the default filter.",
     },
    });
   }

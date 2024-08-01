@@ -2,7 +2,7 @@ import { EmbedBuilder, time, ButtonBuilder, ActionRowBuilder, ApplicationCommand
 
 export default {
  name: "uptime",
- description: "⌛ View Majo.exe bot uptime and past status",
+ description: "⌛ View Nyxia's bot uptime and past status",
  type: ApplicationCommandType.ChatInput,
  cooldown: 3000,
  dm_permission: true,
@@ -10,12 +10,12 @@ export default {
  run: (client, interaction, guildSettings) => {
   try {
    const embed = new EmbedBuilder()
-    .setTitle("📈 Majo.exe uptime")
+    .setTitle("📈 Uptime")
     .setDescription(
-     `**🚀 Date launched**: ${time(client.readyAt)}
-     **⏱️ Started:** ${time(client.readyAt, "R")}
+     `**🚀 When Nyxia was released**: null
+     **⏱️ Time since last reboot:** ${time(client.readyAt, "R")}
      
-     **✨ Did you know?** From the time Majo.exe was launched it served \`${client.commandsRan}\` commands!
+     **✨ Did you know?** From the time Nyxia was launched, it served \`${client.commandsRan}\` commands!
      `
     )
     .setTimestamp()

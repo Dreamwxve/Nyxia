@@ -2,13 +2,14 @@ import { ApplicationCommandType, ActionRowBuilder, ModalBuilder, TextInputBuilde
 
 export default {
  name: "suggestion",
- description: "📝 Send a suggestion to the Majo.exe team",
+ description: "📝 Send a suggestion to the developer",
  type: ApplicationCommandType.ChatInput,
  cooldown: 10000,
  dm_permission: false,
  defer: false,
  usage: "/suggestion",
  run: async (client, interaction) => {
+    return interaction.reply("Currrently being built! :eyes: come back later or join our support server to get an ETA!")
   try {
    const modal = new ModalBuilder() // prettier
     .setCustomId("suggestion")

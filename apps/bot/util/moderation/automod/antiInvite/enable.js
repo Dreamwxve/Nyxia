@@ -40,7 +40,7 @@ export async function enableAntiInvite(client, interaction, guildSettings) {
   return interaction.followUp({ embeds: [embed] });
  } else {
   const ruleToCreate = {
-   name: "Disallow invites [Majo.exe]",
+   name: "Disallow invites [default]",
    creatorId: client.id,
    enabled: true,
    eventType: AutoModerationRuleEventType.MessageSend,
@@ -55,7 +55,7 @@ export async function enableAntiInvite(client, interaction, guildSettings) {
      type: AutoModerationActionType.BlockMessage,
      metadata: {
       channel: interaction.channel,
-      customMessage: "Message blocked due to containing an invite link. Rule added by Majo.exe",
+      customMessage: "Message blocked due to containing an invite link from the default filter.",
      },
     },
    ],
@@ -92,7 +92,7 @@ export async function enableAntiInvite(client, interaction, guildSettings) {
     type: AutoModerationActionType.SendAlertMessage,
     metadata: {
      channel: logChannel,
-     message: "Message blocked due to containing an invite link. Rule added by Majo.exe",
+     message: "Message blocked due to containing an invite link from the default filter.",
     },
    });
   }

@@ -81,7 +81,6 @@ export default async function CustomOverviewPage({ params }) {
       {guildPreview.approximate_presence_count || "0"} online
      </div>
     </div>
-    <span className="mx-auto whitespace-nowrap sm:ml-auto sm:mr-0">Powered by Majo.exe</span>
    </Block>
 
    <div className="mt-6 block gap-6 lg:flex lg:items-start">

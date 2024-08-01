@@ -5,7 +5,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Majo.exe - The only one Discord Bot";
+export const alt = "Nyxia - Your servers one and only";
 
 export const size = {
  width: 1200,

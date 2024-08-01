@@ -38,26 +38,15 @@ export function Footer() {
       {/* YOU ARE NOT ALLOWED TO REMOVE, HIDE OR MODIFY THIS TEXT!
          This project is licensed under the MIT License!   */}
       {/* =================================================== */}
-      {!process.env.NEXT_PUBLIC_IS_HOSTED_BY_CREATOR ? (
        <div className="mt-3 text-neutral-300">
-        <Link target="_blank" href="https://majoexe.xyz" className="font-semibold text-accent-primary hover:opacity-80">
-         🔥 Powered by Majo.exe!
-        </Link>
         <div className="mt-2">
-         This is a public instance of Majo.exe - a free and open-source Discord bot. You can invite it to your server by clicking on the button below or{" "}
-         <Link href="https://majoexe.xyz/invite" className="font-semibold text-neutral-200 hover:underline">
-          by clicking here
+         Nyxia is a highly modified version of{" "}
+         <Link href="https://github.com/igorkowalczyk/majo.exe" className="font-semibold text-neutral-200 hover:underline">
+          Majo.exe
          </Link>
          .
-         <ButtonPrimary className="mt-3 w-fit" href="https://majoexe.xyz/invite">
-          <Icons.sparkles className="mr-2 size-5" />
-          Invite original Majo.exe
-         </ButtonPrimary>
         </div>
        </div>
-      ) : (
-       <p className="mt-3 text-neutral-300">🔥 Bot for almost everything - Memes, Image editing, Giveaways, Moderation, Anime and even more!</p>
-      )}
       {/* =================================================== */}
       <br />
      </div>
@@ -71,7 +60,7 @@ export function Footer() {
        <Link href={`${dashboardConfig.url}/contact`} className="mt-2 block duration-100 hover:text-gray-300 hover:underline motion-reduce:transition-none">
         Contact us
        </Link>
-       <Link href="https://github.com/igorkowalczyk/majo.exe" className="mt-2 block duration-100 hover:text-gray-300 hover:underline motion-reduce:transition-none">
+       <Link href="https://github.com/dreamwxve/nyxia" className="mt-2 block duration-100 hover:text-gray-300 hover:underline motion-reduce:transition-none">
         Source code
        </Link>
       </div>
@@ -80,10 +69,10 @@ export function Footer() {
      <div className="col-span-1 text-neutral-300">
       <p className="mt-3 font-semibold text-white sm:mb-3 sm:mt-0">Legal</p>
       <div>
-       <Link href={`${dashboardConfig.url}/legal/privacy-policy`} className="mt-2 block duration-100 hover:text-gray-300 hover:underline motion-reduce:transition-none">
+       <Link href="https://github.com/Dreamwxve/Dreamwxve/wiki/Privacy-Policy" className="mt-2 block duration-100 hover:text-gray-300 hover:underline motion-reduce:transition-none">
         Privacy Policy
        </Link>
-       <Link href={`${dashboardConfig.url}/legal/terms-of-service`} className="mt-2 block duration-100 hover:text-gray-300 hover:underline motion-reduce:transition-none">
+       <Link href="https://github.com/Dreamwxve/Dreamwxve/wiki/Terms-and-Conditions-of-Use" className="mt-2 block duration-100 hover:text-gray-300 hover:underline motion-reduce:transition-none">
         Terms of Service
        </Link>
       </div>
@@ -95,11 +84,15 @@ export function Footer() {
          This project is licensed under the MIT License!   */}
      {/* =================================================== */}
      <p className="text-sm font-semibold opacity-80">
-      Copyright &copy; 2020 - {new Date().getFullYear()}{" "}
+      Copyright &copy; {new Date().getFullYear()}{" "}
       <Link className="hover:opacity-80" href="https://igorkowalczyk.dev">
        Igor Kowalczyk
       </Link>
-      , All rights reserved.
+      ,{" "}
+      <Link className="hover:opacity-80" href="https://dreamwxve.dev">
+       Dreamwxve
+      </Link>
+      All rights reserved.
      </p>
      {/* =================================================== */}
     </div>
