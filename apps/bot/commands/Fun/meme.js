@@ -1,4 +1,4 @@
-import { ActionRowBuilder, ApplicationCommandType, ButtonBuilder, ButtonStyle, EmbedBuilder } from "discord.js";
+import { ActionRowBuilder, ApplicationCommandType, ButtonBuilder, ButtonStyle, EmbedBuilder, ApplicationCommandOptionType } from "discord.js";
 import fetch from "node-fetch";
 
 export default {
@@ -8,11 +8,24 @@ export default {
  cooldown: 3000,
  dm_permission: true,
  usage: "/meme",
+ options: [
+  {
+   name: "subreddit",
+   description: "want a specific subreddit?",
+   type: ApplicationCommandOptionType.User,
+   required: false,
+  },
+ ],
  run: async (client, interaction, guildSettings) => {
   // get joke from reddit api (dankmemes)
   try {
-   const meme = await fetch("https://reddit.com/r/dankmemes/random/.json");
+   const sub = interaction.options.getString("subreddit") || "dankmemes"
+   const meme = await fetch(`https://reddit.com/r/${sub}/random/.json`);
    const json = await meme.json();
+
+   if (sub && (!json || !json[0] || !json[0].data || !json[0].data.children || !json[0].data.children[0] || !json[0].data.children[0].data || !json[0].data.children[0].data.title || !json[0].data.children[0].data.url)) {
+    return client.errorMessages.createSlashError(interaction, `❌ No results found for \`r/${sub}\` `);
+   }
 
    if (!json || !json[0] || !json[0].data || !json[0].data.children || !json[0].data.children[0] || !json[0].data.children[0].data || !json[0].data.children[0].data.title || !json[0].data.children[0].data.url) {
     return client.errorMessages.createSlashError(interaction, "❌ No results found.");
