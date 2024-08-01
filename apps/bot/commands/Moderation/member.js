@@ -5,6 +5,7 @@ import { getUserAvatar, getUserBanner } from "../../util/moderation/getMemberIma
 import { getMemberInfo } from "../../util/moderation/getMemberInfo.js";
 import { kickMember } from "../../util/moderation/kick.js";
 import { unBanMember } from "../../util/moderation/unban.js";
+import { muteMember } from "../../util/moderation/muteMember.js";
 
 export default {
  name: "member",
@@ -191,17 +192,17 @@ export default {
       type: ApplicationCommandOptionType.User,
      },
      {
+        name: "duration",
+        description: "(s|m|h) Duration for mute",
+        required: true,
+        type: ApplicationCommandOptionType.String,
+     },
+     {
       name: "reason",
       description: "Reason for muting the user",
       required: false,
       type: ApplicationCommandOptionType.String,
      },
-     {
-        name: "duration",
-        description: "(s|m|h) Duration for mute",
-        required: true,
-        type: ApplicationCommandOptionType.String,
-       },
     ],
    },
  ],
