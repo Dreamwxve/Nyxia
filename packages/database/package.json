@@ -13,7 +13,6 @@
     "prisma:migrate": "prisma migrate dev",
     "prisma:format": "prisma format",
     "prisma:push": "prisma db push",
-    "prisma:seed": "node ./src/seed.js",
     "prebuild": "pnpm run prisma:generate",
     "studio": "prisma studio"
   },
@@ -28,24 +27,10 @@
     "ws": "8.18.0"
   },
   "devDependencies": {
-    "prettier-plugin-prisma": "5.0.0",
     "prisma": "5.17.0"
   },
   "engines": {
     "node": ">=20.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/igorkowalczyk/majo.exe.git",
-    "directory": "packages/database"
-  },
-  "keywords": [
-    "prisma",
-    "database",
-    "orm",
-    "sql",
-    "postgresql",
-    "mysql"
-  ],
   "packageManager": "pnpm@9.6.0"
 }
