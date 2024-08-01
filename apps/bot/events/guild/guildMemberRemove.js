@@ -75,6 +75,18 @@ export async function guildMemberRemove(client, member) {
   },
  });
 
+ await prismaClient.botData.upsert({
+    where: {},
+    update :{
+        users: {
+            increment: -1
+        }
+    },
+    create: {
+        users: 0
+    } 
+})
+
  if (!leaves) {
   await prismaClient.guildLeave.create({
    data: {

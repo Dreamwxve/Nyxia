@@ -75,6 +75,19 @@ export async function guildMemberAdd(client, member) {
   },
  });
 
+ await prismaClient.botData.upsert({
+    where: {},
+    update :{
+        users: {
+            increment: 1
+        }
+    },
+    create: {
+        users: 1
+    } 
+})
+
+
  if (!joins) {
   await prismaClient.guildJoin.create({
    data: {
