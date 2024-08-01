@@ -10,6 +10,7 @@ import loadEmojis from "./util/loaders/loadEmojis.js";
 import loadEvents from "./util/loaders/loadEvents.js";
 import loadFonts from "./util/loaders/loadFonts.js";
 import loadModals from "./util/loaders/loadModals.js";
+import syncCommands from "./util/loaders/syncCommands.js";
 
 Logger("info", "Waking up Nyxia...");
 
@@ -91,6 +92,9 @@ await loadModals(client);
 await loadFonts(client);
 await loadEvents(client);
 await loadEmojis(client);
+await syncCommands(client);
+
+
 
 Logger("info", "Logging in...");
 

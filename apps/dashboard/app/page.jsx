@@ -98,7 +98,14 @@ const exampleLogs = [
     }
     return data;
    };
-   
+
+   let userCount;
+   userCount = await prismaClient.botData.findFirst({
+      select: {
+         users: true
+      }
+   })
+
    const exampleStatsData = generateRandomData(30);
    
    let notifications = [
@@ -204,14 +211,14 @@ export default async function HomePage() {
     <div className="relative z-20 -mt-8 flex w-full select-none flex-col items-center justify-center gap-4 px-3 md:w-[90%]">
      <Link href="/api/invite" className={twMerge("group rounded-full border border-white/5 bg-neutral-900 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-800")}>
       <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-400 hover:duration-300">
-       <span>✨ Introducing Nyxia</span>
+       <span>🌸 Get to know me!</span>
        <Icons.arrowRight className={iconVariants({ variant: "normal", className: "-mr-1 ml-1 transition-transform ease-in-out group-hover:translate-x-0.5" })} />
       </AnimatedShinyText>
      </Link>
 
-     <Header1 className="mb-0 justify-center bg-gradient-to-b from-white to-neutral-400 box-decoration-clone bg-clip-text text-center !font-black !leading-snug text-fill-transparent xl:!text-5xl 2xl:!text-7xl">The only one Discord Bot</Header1>
+     <Header1 className="mb-0 justify-center bg-gradient-to-b from-white to-neutral-400 box-decoration-clone bg-clip-text text-center !font-black !leading-snug text-fill-transparent xl:!text-5xl 2xl:!text-7xl">Nyxia</Header1>
      <Header2 className="mb-0 max-w-[680px] text-center font-normal text-white/70">
-      <Balancer>Nyxia is the ultimate Discord bot for fun, memes, images, giveaways, and anime! With over 120 commands, it offers endless entertainment. Whether you want hilarious memes, exciting giveaways, or an anime fix, Nyxia has it all!</Balancer>
+      <Balancer>The ultimate Discord bot for fun, memes, images, giveaways, and anime! With over 120 commands, it offers endless entertainment. Whether you want hilarious memes, exciting giveaways, or an anime fix, Nyxia has it all!</Balancer>
      </Header2>
      <div className="mt-2 flex flex-col gap-4 sm:flex-row">
       <LoginButton />
@@ -240,7 +247,7 @@ export default async function HomePage() {
       </div>
 
       <div className="flex flex-col items-center justify-center gap-4">
-       <GradientHeader>{formatNumber(100000)}+ users</GradientHeader>
+       <GradientHeader>{formatNumber(userCount)}+ users</GradientHeader>
       </div>
      </div>
 
@@ -431,7 +438,7 @@ export default async function HomePage() {
    <div className="mx-auto mt-12 pb-10 md:px-8 lg:px-16">
     <GradientHeader className="!block !text-center !text-3xl md:!text-4xl">Well.. what are you waiting for?</GradientHeader>
     <p className="mb-6 mt-3 w-full text-center text-white/70">
-     <Balancer>press it</Balancer>
+     <Balancer>press it.</Balancer>
     </p>
 
     <ButtonPrimary href="/api/invite" className="mx-auto w-fit">

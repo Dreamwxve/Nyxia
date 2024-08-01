@@ -1,4 +1,5 @@
 import { PresenceUpdateStatus, ActivityType } from "discord.js";
+import prismaClient from "@nyxia/database";
 
 export async function ready(client) {
  const registerTime = performance.now();
@@ -46,4 +47,36 @@ export async function ready(client) {
  });
 
  client.user.setStatus(client.config.presence.status ?? PresenceUpdateStatus.Online);
+
+ let totalMemberCount = 0;
+ const guilds = await client.guilds.fetch();
+ for (const guild of guilds.values()) {
+    try {
+        const members = await guild.members.fetch();
+        totalMemberCount += members.size;
+    } catch {}
+}
+
+
+await prismaClient.botData.upsert({
+    where: {},
+    update :{
+        users: userCount
+    },
+    create: {
+        users: userCount
+    } 
+})
+
+
+
+
+
+
+
+
+
+
+
+
 }

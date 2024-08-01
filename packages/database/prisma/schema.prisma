@@ -302,3 +302,12 @@ model GuildLeaveMessage {
 
  @@map(name: "guild_leave_message")
 }
+
+// General Bot Data
+model botData {
+ id          String   @id @default(cuid())
+ users       Int
+ cmdsran     Int     
+
+ @@map(name: "bot_data")
+}
