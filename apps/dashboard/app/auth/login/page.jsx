@@ -2,7 +2,7 @@ import { getSession } from "lib/session";
 import { redirect } from "next/navigation";
 import { getProviders } from "next-auth/react";
 import { ButtonSecondary } from "@/components/Buttons";
-import { ProviderLogin } from "@/components/client/ProviderLogin";
+import { DiscordLogin } from "@/components/client/DiscordLogin";
 import Image from "@/components/client/shared/Image";
 import { Header1 } from "@/components/Headers";
 import { Icons, iconVariants } from "@/components/Icons";
@@ -48,7 +48,7 @@ export default async function LoginPage({ searchParams }) {
    </div>
    <div className="z-30 flex flex-col gap-4 sm:flex-row">
     {Object.values(providers).map((provider) => (
-     <ProviderLogin key={provider.name} provider={provider} />
+     <DiscordLogin />
     ))}
     <ButtonSecondary href="/">
      <Icons.arrowLeft className={iconVariants({ variant: "button" })} />
