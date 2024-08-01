@@ -30,131 +30,141 @@ import { Typing } from "@/components/Loaders";
 import { LoginButton } from "@/components/LoginButton";
 // import TextRevealByWord from "@/components/client/shared/TextRevealByWord";
 
+
 const exampleLogs = [
- {
-  id: "0",
-  type: "command_change",
-  createdAt: new Date(new Date().getTime() - 2 * 16 * 60 * 15 * 1000).toISOString().toString(),
-  content: "Disabled command /help",
-  user: {
-   id: "544164729354977282",
-   global_name: "Robert",
-   //avatar: "0",
-   fullAvatar: avatar03,
-   discriminator: "0",
-  },
- },
- {
-  id: "1",
-  type: "vanity",
-  createdAt: new Date(new Date().getTime() - 1 * 21 * 60 * 60 * 1000).toISOString().toString(),
-  content: "Changed vanity URL to /majo",
-  user: {
-   id: "689210472345677282",
-   global_name: "Jonas",
-   //avatar: "0",
-   fullAvatar: avatar01,
-   discriminator: "0",
-  },
- },
- {
-  id: "2",
-  type: "category_change",
-  // date 3 days ago
-  createdAt: new Date(new Date().getTime() - 2 * 23 * 60 * 60 * 1000).toISOString().toString(),
-  content: "Enabled category Fun",
-  user: {
-   id: "989210472345677282",
-   global_name: "Ethan",
-   //avatar: "0",
-   fullAvatar: avatar05,
-   discriminator: "0",
-  },
- },
-];
-
-function pseudoRandom(index) {
- const seed = index;
- const random1 = Math.sin(seed) * 10000;
- const baseValue1 = random1 - Math.floor(random1);
- const random2 = Math.cos(seed * 2) * 10000;
- const baseValue2 = random2 - Math.floor(random2);
- const growthFactor = Math.pow(index + 1, 1.5);
- const variationFactor = 26;
-
- const result = (baseValue1 + baseValue2) * (1 + variationFactor) + growthFactor;
- return result;
-}
-
-const generateRandomData = (length) => {
- const data = [];
- for (let i = 0; i < length; i++) {
-  data.push({
-   date: new Date(new Date().getTime() - i * 24 * 60 * 60 * 1000).toISOString().split("T")[0],
-   Joins: Math.floor(pseudoRandom(i)),
-  });
- }
- return data;
-};
-
-const exampleStatsData = generateRandomData(30);
-
-let notifications = [
- {
-  author: "Dreamwxve",
-  avatar: "https://raw.githubusercontent.com/Dreamwxve/Dreamwxve/main/newavatar.png",
-  content: (
-   <span>
-    enabled <span className="font-bold text-accent-primary">AutoMod</span>
-   </span>
-  ),
- },
- {
-  author: "Zoe",
-  avatar: avatar07,
-  content: (
-   <span>
-    banned <span className="font-bold text-accent-primary">John Doe</span>
-   </span>
-  ),
- },
- {
-  author: "Michael",
-  avatar: avatar04,
-  content: (
-   <span>
-    warned <span className="font-bold text-accent-primary">Jane Smith</span>
-   </span>
-  ),
- },
- {
-  author: "Leani" /* ;-; good old times */,
-  avatar: avatar06,
-  content: (
-   <span>
-    disabled <span className="font-bold text-accent-primary">/help</span> command
-   </span>
-  ),
- },
- {
-  author: "Ethan",
-  avatar: avatar05,
-  content: (
-   <span>
-    set vanity to <span className="font-bold text-accent-primary">/majo</span>
-   </span>
-  ),
- },
- {
-  author: "Oliver",
-  avatar: avatar03,
-  content: (
-   <span>
-    enabled category <span className="font-bold text-accent-primary">Moderation</span>
-   </span>
-  ),
- },
-];
+    {
+     id: "0",
+     type: "command_change",
+     createdAt: new Date(new Date().getTime() - 2 * 16 * 60 * 15 * 1000).toISOString().toString(),
+     content: "Disabled command /help",
+     user: {
+      id: "1125198914895757342",
+      global_name: "TJ",
+      //avatar: "0",
+      fullAvatar: avatar06,
+      discriminator: "0",
+     },
+    },
+    {
+     id: "1",
+     type: "vanity",
+     createdAt: new Date(new Date().getTime() - 1 * 21 * 60 * 60 * 1000).toISOString().toString(),
+     content: "Changed vanity URL to /tsukiyo",
+     user: {
+      id: "929532941464379433",
+      global_name: "Hayden",
+      //avatar: "0",
+      fullAvatar: avatar01,
+      discriminator: "0",
+     },
+    },
+    {
+     id: "2",
+     type: "category_change",
+     // date 3 days ago
+     createdAt: new Date(new Date().getTime() - 2 * 23 * 60 * 60 * 1000).toISOString().toString(),
+     content: "Enabled category Fun",
+     user: {
+      id: "1202768864920731720",
+      global_name: "Luke",
+      //avatar: "0",
+      fullAvatar: avatar05,
+      discriminator: "0",
+     },
+    },
+   ];
+   
+   function pseudoRandom(index) {
+    const seed = index;
+    const random1 = Math.sin(seed) * 10000;
+    const baseValue1 = random1 - Math.floor(random1);
+    const random2 = Math.cos(seed * 2) * 10000;
+    const baseValue2 = random2 - Math.floor(random2);
+    const growthFactor = Math.pow(index + 1, 1.5);
+    const variationFactor = 26;
+   
+    const result = (baseValue1 + baseValue2) * (1 + variationFactor) + growthFactor;
+    return result;
+   }
+   
+   const generateRandomData = (length) => {
+    const data = [];
+    for (let i = 0; i < length; i++) {
+     data.push({
+      date: new Date(new Date().getTime() - i * 24 * 60 * 60 * 1000).toISOString().split("T")[0],
+      Joins: Math.floor(pseudoRandom(i)),
+     });
+    }
+    return data;
+   };
+   
+   const exampleStatsData = generateRandomData(30);
+   
+   let notifications = [
+    {
+     author: "Hayden",
+     avatar: avatar01,
+     content: (
+      <span>
+       enabled <span className="text-accent-primary font-bold">AutoMod</span>
+      </span>
+     ),
+    },
+    {
+     author: "Stef",
+     avatar: avatar02,
+     content: (
+      <span>
+       banned <span className="text-accent-primary font-bold">FR3E VBUCK5</span>
+      </span>
+     ),
+    },
+    {
+     author: "Nuggs",
+     avatar: avatar03,
+     content: (
+      <span>
+       warned <span className="text-accent-primary font-bold">Bob</span>
+      </span>
+     ),
+    },
+    {
+     author: "Xav", 
+     avatar: avatar04,
+     content: (
+      <span>
+       disabled <span className="text-accent-primary font-bold">/anime</span> command
+      </span>
+     ),
+    },
+    {
+     author: "Luke",
+     avatar: avatar05,
+     content: (
+      <span>
+       set vanity to <span className="text-accent-primary font-bold">/tsukiyo</span>
+      </span>
+     ),
+    },
+    {
+     author: "TJ",
+     avatar: avatar06,
+     content: (
+      <span>
+       enabled category <span className="text-accent-primary font-bold">Utility</span>
+      </span>
+     ),
+    },
+    {
+       author: "Mad",
+       avatar: avatar07,
+       content: (
+        <span>
+         muted <span className="text-accent-primary font-bold">Zen</span>
+        </span>
+       ),
+      },
+   ];
 
 notifications = Array.from({ length: 10 }, () => notifications).flat();
 
@@ -233,7 +243,7 @@ export default async function HomePage() {
       </div>
      </div>
 
-     {/* <p className="my-6 w-full text-center text-white/70">...and counting!</p> */}
+     <p className="my-6 w-full text-center text-white/70">{" "}</p>
 
      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 md:grid md:grid-cols-2 md:px-0 lg:grid-cols-3">
       <div className="row-span-1 overflow-hidden rounded-xl border border-neutral-800 bg-background-secondary p-4 duration-200 hover:bg-neutral-800/50">
@@ -242,7 +252,7 @@ export default async function HomePage() {
        <div className="mt-3">
         <div className="flex flex-row items-center gap-1">
          <div className="ml-5 h-3 w-7 rounded-tl-md border-l-2 border-t-2 border-button-secondary" />
-         <Image src={dashboardConfig.logo} alt="User avatar" quality={95} width={20} height={20} className="size-5 min-h-5 min-w-5 self-baseline rounded-full" />
+         <Image src="https://raw.githubusercontent.com/Dreamwxve/Dreamwxve/main/newavatar.png" alt="User avatar" quality={95} width={20} height={20} className="size-5 min-h-5 min-w-5 self-baseline rounded-full" />
          <span className="text-xs">
           <span className="font-bold">Dreamwxve</span> used <span className="font-bold text-accent-primary">/image blur</span>
          </span>
@@ -344,7 +354,7 @@ export default async function HomePage() {
          <div className="ml-2 flex flex-row items-center">
           <span className="font-bold">{dashboardConfig.title}</span>{" "}
           <span className="ml-1 flex items-center gap-1 rounded bg-[#5c65f3] px-1 py-[0.12rem] text-xs text-white">
-           <Icons.check className={iconVariants({ variant: "small" })} /> <span className="-mb-px">BOT</span>
+           <Icons.check className={iconVariants({ variant: "small" })} /> <span className="-mb-px">APP</span>
           </span>
           <span className="ml-2 text-sm text-gray-400">Today at 4:20 PM</span>
          </div>
@@ -413,14 +423,14 @@ export default async function HomePage() {
     </div>
    </div>
    <div className="mx-auto pb-10 md:px-8 lg:px-16">
-    <GradientHeader className="!block !text-center !text-3xl md:!text-4xl">Frequently asked questions</GradientHeader>
+    <GradientHeader className="!block !text-center !text-3xl md:!text-4xl">FAQ</GradientHeader>
     <Faq />
    </div>
 
    <div className="mx-auto mt-12 pb-10 md:px-8 lg:px-16">
-    <GradientHeader className="!block !text-center !text-3xl md:!text-4xl">What are you waiting for?</GradientHeader>
+    <GradientHeader className="!block !text-center !text-3xl md:!text-4xl">Well.. what are you waiting for?</GradientHeader>
     <p className="mb-6 mt-3 w-full text-center text-white/70">
-     <Balancer>Don't wait ages to add Nyxia to your server!</Balancer>
+     <Balancer>press it</Balancer>
     </p>
 
     <ButtonPrimary href="/api/invite" className="mx-auto w-fit">
