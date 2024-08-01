@@ -57,7 +57,6 @@ export async function ready(client) {
     } catch {}
 }
 
-
 await prismaClient.botData.upsert({
     where: {
         id: "1"
