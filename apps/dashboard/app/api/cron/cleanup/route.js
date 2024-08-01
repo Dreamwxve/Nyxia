@@ -1,6 +1,7 @@
 import prismaClient from "@nyxia/database";
 import { Logger } from "@nyxia/util/functions/util";
 import { NextResponse } from "next/server";
+export const dynamic = 'force-dynamic';
 
 export async function GET(request) {
  try {
