@@ -247,7 +247,7 @@ export default async function HomePage() {
       </div>
 
       <div className="flex flex-col items-center justify-center gap-4">
-       <GradientHeader>{formatNumber(userCount)}+ users</GradientHeader>
+       <GradientHeader>{formatNumber(userCount)}+ users</GradientHeader> 
       </div>
      </div>
 
