@@ -16,6 +16,7 @@
 <h1 align="center">
   <strong>📊Stats📊</strong>
 </h1>
+
 ![Alt](https://repobeats.axiom.co/api/embed/61244284a9a0ade6d44d0431a6bd23dbddafd179.svg "Repobeats analytics image")
 
 <br />
