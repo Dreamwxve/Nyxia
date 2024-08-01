@@ -5,6 +5,7 @@ export async function muteMember(client, interaction, color) {
   let user = interaction.options.getMember("user");
   const reason = interaction.options.getString("reason") || "No reason provided";
   let duration = interaction.options.getString("duration");
+  let rawDuration = duration;
   duration = duration.toLowerCase().trim()
 
     const units = {
@@ -19,6 +20,7 @@ export async function muteMember(client, interaction, color) {
     const value = parseInt(match[1]);
     const unit = match[2];
     duration = parseInt(value * units[unit]);
+    duration = duration + 5000;
 
   if (!user) {
    return client.errorMessages.createSlashError(interaction, "❌ You need to provide a user to mute");
@@ -52,13 +54,17 @@ export async function muteMember(client, interaction, color) {
    return client.errorMessages.createSlashError(interaction, "❌ This user has higher or equal roles than me");
   }
 
-  await interaction.guild.members.timeout(user, { duration, reason });
+  if (user.id && !interaction.guild.members.cache.has(user.id)) {
+    return client.errorMessages.createSlashError(interaction, "❌ This user is not in the server");
+  }
+
+  await user.timeout(duration, reason);
 
   const embed = new EmbedBuilder()
    .setColor(color)
    .setTimestamp()
    .setTitle("🔨 Member muted")
-   .setDescription(`> **${user}** has been muted for ${muteTime}\n> **Reason:** ${reason}`)
+   .setDescription(`> **${user}** has been muted for **${rawDuration}**\n> **Reason:** ${reason}`)
    .setFooter({
     text: `Muted by ${interaction.member.user.globalName || interaction.member.user.username}`,
     iconURL: interaction.member.user.displayAvatarURL({

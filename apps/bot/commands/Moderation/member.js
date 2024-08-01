@@ -224,7 +224,7 @@ export default {
    await getUserAvatar(client, interaction, guildSettings?.embedColor || client.config.defaultColor);
   } else if (subcommand === "banner") {
    await getUserBanner(client, interaction, guildSettings?.embedColor || client.config.defaultColor);
-  } else if (subcommand === "banner") {
+  } else if (subcommand === "mute") {
    await muteMember(client, interaction, guildSettings?.embedColor || client.config.defaultColor);
   } else if (command === "nickname") {
    const subcommand = interaction.options.getSubcommand();

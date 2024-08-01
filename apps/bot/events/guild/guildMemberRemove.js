@@ -76,7 +76,9 @@ export async function guildMemberRemove(client, member) {
  });
 
  await prismaClient.botData.upsert({
-    where: {},
+    where: {
+        id: "1"
+    },
     update :{
         users: {
             increment: -1

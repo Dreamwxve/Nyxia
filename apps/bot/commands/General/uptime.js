@@ -1,4 +1,5 @@
 import { EmbedBuilder, time, ButtonBuilder, ActionRowBuilder, ApplicationCommandType, ButtonStyle } from "discord.js";
+import prismaClient from "@nyxia/database";
 
 export default {
  name: "uptime",
@@ -7,15 +8,23 @@ export default {
  cooldown: 3000,
  dm_permission: true,
  usage: "/uptime",
- run: (client, interaction, guildSettings) => {
+ run: async (client, interaction, guildSettings) => {
   try {
+    let data = await prismaClient.botData.findFirst({
+      where: {
+        id: "1"
+      }
+    });
+    
+    if (!cmdsRan.cmdsran) cmdsRan = 0
+
    const embed = new EmbedBuilder()
     .setTitle("📈 Uptime")
     .setDescription(
      `**🚀 When Nyxia was released**: null
      **⏱️ Time since last reboot:** ${time(client.readyAt, "R")}
      
-     **✨ Did you know?** From the time Nyxia was launched, it served \`${client.commandsRan}\` commands!
+     **✨ Did you know?** From the time Nyxia was launched, it served \`${cmdsRan}\` commands!
      `
     )
     .setTimestamp()

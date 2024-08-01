@@ -37,9 +37,9 @@ export async function messageCreate(client, message) {
       .setURL(`${client.config.url}/invite`)
     );
 
-   return message.reply({ embeds: [embed], allowedMentions: { repliedUser: false }, components: [action] });
+  // return message.reply({ embeds: [embed], allowedMentions: { repliedUser: false }, components: [action] });
   } else {
-   return message.reply({ embeds: [embed], allowedMentions: { repliedUser: false } });
+  // return message.reply({ embeds: [embed], allowedMentions: { repliedUser: false } });
   }
  }
 
