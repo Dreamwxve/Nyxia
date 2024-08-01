@@ -12,7 +12,7 @@ export default {
   {
    name: "subreddit",
    description: "want a specific subreddit?",
-   type: ApplicationCommandOptionType.User,
+   type: ApplicationCommandOptionType.String,
    required: false,
   },
  ],

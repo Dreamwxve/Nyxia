@@ -92,7 +92,7 @@ await loadModals(client);
 await loadFonts(client);
 await loadEvents(client);
 await loadEmojis(client);
-await syncCommands(client);
+syncCommands(client);
 
 
 

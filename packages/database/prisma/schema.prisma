@@ -306,7 +306,7 @@ model GuildLeaveMessage {
 model botData {
  id          String   @id @default(cuid())
  users       Int
- cmdsran     Int     
+ cmdsran     Int     @default(0)
 
  @@map(name: "bot_data")
 }

@@ -48,23 +48,26 @@ export async function ready(client) {
 
  client.user.setStatus(client.config.presence.status ?? PresenceUpdateStatus.Online);
 
- let totalMemberCount = 0;
+ let userCount = 0;
  const guilds = await client.guilds.fetch();
  for (const guild of guilds.values()) {
     try {
         const members = await guild.members.fetch();
-        totalMemberCount += members.size;
+        userCount += members.size;
     } catch {}
 }
 
 
 await prismaClient.botData.upsert({
-    where: {},
+    where: {
+        id: "1"
+    },
     update :{
         users: userCount
     },
     create: {
-        users: userCount
+        users: userCount,
+        cmdsran: 0
     } 
 })
 
