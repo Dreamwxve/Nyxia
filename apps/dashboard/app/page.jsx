@@ -3,7 +3,6 @@ import prismaClient from "@nyxia/database";
 import { formatNumber } from "@nyxia/util/functions/util";
 import Link from "next/link";
 import avatar01 from "public/assets/avatars/TJ.webp";
-import avatar02 from "public/assets/avatars/xav.webp";
 import avatar03 from "public/assets/avatars/hayden.webp";
 import avatar04 from "public/assets/avatars/luke.webp";
 import avatar05 from "public/assets/avatars/mad.webp";
@@ -102,8 +101,8 @@ const exampleStatsData = generateRandomData(30);
 
 let notifications = [
  {
-  author: "Amelia",
-  avatar: avatar02,
+  author: "Dreamwxve",
+  avatar: "https://raw.githubusercontent.com/Dreamwxve/Dreamwxve/main/newavatar.png",
   content: (
    <span>
     enabled <span className="font-bold text-accent-primary">AutoMod</span>
@@ -271,7 +270,7 @@ export default async function HomePage() {
       <div className="row-span-1 overflow-hidden rounded-xl border border-neutral-800 bg-background-secondary p-4 duration-200 hover:bg-neutral-800/50">
        <GradientHeader>Leveling?</GradientHeader>
        <p className="mt-2 max-w-[680px] text-white/70">Nyxia has a leveling system that will keep your members active and entertained.</p>
-       <LevelUp avatar={dashboardConfig.logo} username="Majonez.exe" />
+       <LevelUp avatar="https://raw.githubusercontent.com/Dreamwxve/Dreamwxve/main/newavatar.png" username="Dreamwxve" />
       </div>
       <div className="relative col-span-2 row-span-2 overflow-hidden rounded-xl border border-neutral-800 bg-background-secondary px-8 py-6 duration-200 hover:bg-neutral-800/50 lg:col-span-1">
        <GradientHeader>Moderation? We have it!</GradientHeader>
