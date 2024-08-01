@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  You can contact us via our support server, where you can reach out to a developer for assistance. Alternatively, you can open an issue on this repository if you have any questions or need help. You can also shoot us an email at <strong>tsukiyodev@gmail.com</strong>!
+  You can contact me via my support server, where you can reach out me for assistance. Alternatively, you can open an issue on this repository if you have any questions or need help. You can also shoot me an email at <strong>dreamwxve@gmail.com</strong>!
 </p>
 
 <h1 align="center">
