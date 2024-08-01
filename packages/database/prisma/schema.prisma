@@ -1,7 +1,6 @@
 datasource db {
  provider  = "postgresql"
  url       = env("DATABASE_URL")
- directUrl = env("DATABASE_URL_UNPOOLED")
 }
 
 generator client {
@@ -301,4 +300,13 @@ model GuildLeaveMessage {
  guild       Guild    @relation(fields: [guildId], references: [guildId], onDelete: Cascade)
 
  @@map(name: "guild_leave_message")
+}
+
+// General Bot Data
+model botData {
+ id          String   @id @default(cuid())
+ users       Int
+ cmdsran     Int     @default(0)
+
+ @@map(name: "bot_data")
 }

@@ -6,9 +6,19 @@ import { EmbedBuilder, PermissionsBitField } from "discord.js";
 
 export async function interactionCreate(client, interaction) {
  try {
-  client.commandsRan++;
   if (!interaction.guild || !interaction.guild.available) return;
   if (!interaction.member.user) await interaction.guild.members.fetch(interaction.member.user.id);
+
+    prismaClient.botData.update({
+        where: {
+            id: "1"
+        },
+        update: {
+            cmdsran: {
+                increment: 1
+            }
+        }
+    });
 
   if (interaction.isChatInputCommand()) {
    const command = client.slashCommands.get(interaction.commandName);

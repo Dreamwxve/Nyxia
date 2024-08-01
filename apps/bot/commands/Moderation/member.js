@@ -5,6 +5,7 @@ import { getUserAvatar, getUserBanner } from "../../util/moderation/getMemberIma
 import { getMemberInfo } from "../../util/moderation/getMemberInfo.js";
 import { kickMember } from "../../util/moderation/kick.js";
 import { unBanMember } from "../../util/moderation/unban.js";
+import { muteMember } from "../../util/moderation/muteMember.js";
 
 export default {
  name: "member",
@@ -177,6 +178,33 @@ export default {
     },
    ],
   },
+  {
+    name: "mute",
+    description: "🔇 Timeout a user",
+    type: ApplicationCommandOptionType.Subcommand,
+    usage: "/member kick <reason>",
+    default_member_permissions: [PermissionFlagsBits.KickMembers],
+    options: [
+     {
+      name: "user",
+      description: "The user who should be muted",
+      required: true,
+      type: ApplicationCommandOptionType.User,
+     },
+     {
+        name: "duration",
+        description: "(s|m|h) Duration for mute",
+        required: true,
+        type: ApplicationCommandOptionType.String,
+     },
+     {
+      name: "reason",
+      description: "Reason for muting the user",
+      required: false,
+      type: ApplicationCommandOptionType.String,
+     },
+    ],
+   },
  ],
  run: async (client, interaction, guildSettings) => {
   const command = interaction.options.getSubcommandGroup();
@@ -196,6 +224,8 @@ export default {
    await getUserAvatar(client, interaction, guildSettings?.embedColor || client.config.defaultColor);
   } else if (subcommand === "banner") {
    await getUserBanner(client, interaction, guildSettings?.embedColor || client.config.defaultColor);
+  } else if (subcommand === "mute") {
+   await muteMember(client, interaction, guildSettings?.embedColor || client.config.defaultColor);
   } else if (command === "nickname") {
    const subcommand = interaction.options.getSubcommand();
    await changememberNickname(client, interaction, guildSettings?.embedColor || client.config.defaultColor, subcommand);
