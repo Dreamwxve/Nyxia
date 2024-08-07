@@ -67,5 +67,5 @@
     "not dead",
     "not op_mini all"
   ],
-  "packageManager": "pnpm@9.6.0"
+  "packageManager": "pnpm@9.7.0"
 }
