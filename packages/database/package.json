@@ -20,8 +20,8 @@
   "dependencies": {
     "@neondatabase/serverless": "0.9.4",
     "@nyxia/config": "workspace:*",
-    "@prisma/adapter-neon": "5.17.0",
-    "@prisma/client": "5.17.0",
+    "@prisma/adapter-neon": "5.18.0",
+    "@prisma/client": "5.18.0",
     "chalk": "5.3.0",
     "ioredis": "5.4.1",
     "prisma-redis-middleware": "4.8.0",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "prettier-plugin-prisma": "5.0.0",
-    "prisma": "5.17.0"
+    "prisma": "5.18.0"
   },
   "engines": {
     "node": ">=20.0.0"
